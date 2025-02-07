@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/styles/colors.dart';
 
+import 'widgets/experiences_section.dart';
+
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
 
@@ -27,23 +29,46 @@ class HomePageView extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: AppColors.lightBlack,
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      child: Row(
                         children: [
-                          Text(
-                            'Hi, I am',
-                            style: TextStyle(color: AppColors.accentTextColor),
-                          ),
-                          Text(
-                            'Jasper Janboy',
-                            style: TextStyle(
-                              color: AppColors.mainTextColor,
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      'Hi, I am',
+                                      style: TextStyle(
+                                          color: AppColors.accentTextColor),
+                                    ),
+                                    Text(
+                                      'Jasper Janboy',
+                                      style: TextStyle(
+                                        color: AppColors.mainTextColor,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Software Engineer',
+                                      style: TextStyle(
+                                        color: AppColors.secondaryTextColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
-                          Text('Software Engineer', style: TextStyle(
-                            color: AppColors.secondaryTextColor,
-                          ),)
+                          Expanded(
+                            child: SingleChildScrollView(
+                              child: Column(
+                                children: [
+                                  ExperiencesSection(),
+                                ],
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
