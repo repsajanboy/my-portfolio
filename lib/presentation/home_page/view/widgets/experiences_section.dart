@@ -12,61 +12,73 @@ class ExperiencesSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: experiences.map((exp) {
-          return Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Text(
-                  '${exp.startDate} - ${exp.endDate}',
-                  style: TextStyle(
-                    color: AppColors.secondaryTextColor,
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Column(
+                    children: [
+                      SizedBox(height: 3),
+                      Text(
+                        '${exp.startDate} - ${exp.endDate}',
+                        style: TextStyle(
+                          color: AppColors.secondaryTextColor,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ),
-              Expanded(
-                flex: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      '${exp.jobTitle} · ${exp.company}',
-                      style: TextStyle(
-                        color: AppColors.mainTextColor,
+                Expanded(
+                  flex: 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        '${exp.jobTitle} · ${exp.company}',
+                        style: TextStyle(
+                          color: AppColors.mainTextColor,
+                          fontSize: 16.0,
+                        ),
                       ),
-                    ),
-                    Text(
-                      exp.desciption,
-                      style: TextStyle(
-                        color: AppColors.secondaryTextColor,
+                      SizedBox(height: 8.0),
+                      Text(
+                        exp.desciption,
+                        style: TextStyle(
+                          color: AppColors.secondaryTextColor,
+                        ),
                       ),
-                    ),
-                    Wrap(
-                      children: exp.skills.map((e) {
-                        return Container(
-                          margin: EdgeInsets.all(8.0),
-                          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                          decoration: BoxDecoration(
-                            color: AppColors.accentTextColor
-                                .withValues(alpha: 0.1),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(8.0),
+                      SizedBox(height: 8.0),
+                      Wrap(
+                        children: exp.skills.map((e) {
+                          return Container(
+                            margin: EdgeInsets.all(8.0),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 16.0, vertical: 8.0),
+                            decoration: BoxDecoration(
+                              color: AppColors.accentTextColor
+                                  .withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
                             ),
-                          ),
-                          child: Text(
-                            e,
-                            style: TextStyle(
-                              color: AppColors.accentTextColor,
+                            child: Text(
+                              e,
+                              style: TextStyle(
+                                color: AppColors.accentTextColor,
+                              ),
                             ),
-                          ),
-                        );
-                      }).toList(),
-                    )
-                  ],
-                ),
-              )
-            ],
+                          );
+                        }).toList(),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           );
         }).toList(),
       ),
