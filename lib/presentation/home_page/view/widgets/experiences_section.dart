@@ -25,6 +25,7 @@ class ExperiencesSection extends StatelessWidget {
                       Text(
                         '${exp.startDate} - ${exp.endDate}',
                         style: TextStyle(
+                          fontFamily: 'OpenSans',
                           color: AppColors.secondaryTextColor,
                         ),
                       ),
@@ -40,7 +41,9 @@ class ExperiencesSection extends StatelessWidget {
                       Text(
                         '${exp.jobTitle} · ${exp.company}',
                         style: TextStyle(
+                          fontFamily: 'OpenSans',
                           color: AppColors.mainTextColor,
+                          fontWeight: FontWeight.w700,
                           fontSize: 16.0,
                         ),
                       ),
@@ -48,7 +51,9 @@ class ExperiencesSection extends StatelessWidget {
                       Text(
                         exp.desciption,
                         style: TextStyle(
+                          fontFamily: 'OpenSans',
                           color: AppColors.secondaryTextColor,
+                          fontSize: 14.0,
                         ),
                       ),
                       SizedBox(height: 8.0),
@@ -68,7 +73,9 @@ class ExperiencesSection extends StatelessWidget {
                             child: Text(
                               e,
                               style: TextStyle(
+                                fontFamily: 'OpenSans',
                                 color: AppColors.accentTextColor,
+                                fontSize: 12.0,
                               ),
                             ),
                           );
