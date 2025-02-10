@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/styles/colors.dart';
 
+import 'widgets/about_section.dart';
 import 'widgets/experiences_section.dart';
 
 class HomePageView extends StatelessWidget {
@@ -25,7 +26,7 @@ class HomePageView extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 96.0),
                       decoration: BoxDecoration(
                         color: AppColors.lightBlack,
                       ),
@@ -64,6 +65,7 @@ class HomePageView extends StatelessWidget {
                             child: SingleChildScrollView(
                               child: Column(
                                 children: [
+                                  AboutSection(),
                                   ExperiencesSection(),
                                 ],
                               ),
