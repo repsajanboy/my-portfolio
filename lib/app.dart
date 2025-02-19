@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Portfolio',
+      title: 'Jasper Janboy Monterey',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: router.onGenerateRoute,
     );

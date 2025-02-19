@@ -26,7 +26,8 @@ class HomePageView extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 96.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 48.0, vertical: 96.0),
                       decoration: BoxDecoration(
                         color: AppColors.lightBlack,
                       ),
@@ -35,25 +36,62 @@ class HomePageView extends StatelessWidget {
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       'Hi, I am',
                                       style: TextStyle(
-                                          color: AppColors.accentTextColor),
+                                        fontFamily: 'OpenSans',
+                                        color: AppColors.accentTextColor,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 18.0,
+                                      ),
                                     ),
+                                    SizedBox(height: 16.0),
                                     Text(
                                       'Jasper Janboy',
                                       style: TextStyle(
+                                        fontFamily: 'Montserrat',
                                         color: AppColors.mainTextColor,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 48.0,
                                       ),
                                     ),
+                                    SizedBox(height: 16.0),
                                     Text(
                                       'Software Engineer',
                                       style: TextStyle(
+                                        fontFamily: 'Montserrat',
                                         color: AppColors.secondaryTextColor,
+                                        fontSize: 24.0,
+                                      ),
+                                    ),
+                                    SizedBox(height: 16.0),
+                                    RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text:
+                                                'Code - blooded · Run by coffee',
+                                            style: TextStyle(
+                                              fontFamily: 'OpenSans',
+                                              color:
+                                                  AppColors.secondaryTextColor,
+                                              fontSize: 14.0,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: ' ☕',
+                                            style: TextStyle(
+                                              fontFamily: 'OpenSans',
+                                              color: AppColors.accentTextColor,
+                                              fontSize: 18.0,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],
